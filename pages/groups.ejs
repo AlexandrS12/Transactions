@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Groups</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>ID_Faculty</th>
+            <th>Actions</th>
+        </tr>
+        <% groups.forEach(group => { %>
+            <tr>
+                <td><%= group.Id %></td>
+                <td><%= group.Name %></td>
+                <td><%= group.Id_Faculty %></td>
+                <td>
+                    <a href="/groups/edit/<%= group.Id %>">Edit</a>
+                    <a href="/groups/delete/<%= group.Id %>">Delete</a>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+    <a href="/groups/add">Add Group</a>
+</body>
+</html>

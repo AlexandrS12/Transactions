@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Faculties</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+        <% faculties.forEach(faculty => { %>
+            <tr>
+                <td><%= faculty.Id %></td>
+                <td><%= faculty.Name %></td>
+                <td>
+                    <a href="/faculties/edit/<%= faculty.Id %>">Edit</a>
+                    <a href="/faculties/delete/<%= faculty.Id %>">Delete</a>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+    <a href="/faculties/add">Add Faculty</a>
+</body>
+</html>

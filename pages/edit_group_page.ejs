@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Edit Group</h1>
+    <form action="/groups/edit/<%= group.Id %>" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= group.Name %>" required>
+        
+        <label for="Id_Faculty">Faculty ID:</label>
+        <input type="number" id="Id_Faculty" name="Id_Faculty" value="<%= group.Id_Faculty %>" required>
+        
+        <button type="submit">Update Group</button>
+    </form>
+    <a href="/groups">Back to Groups</a>
+</body>
+</html>
